@@ -12,10 +12,6 @@ chapter = false
 **Trường Đại Học:** Đại học Sài Gòn  
 **Ngành:** Công nghệ Thông tin  
 **Lớp:** DCT1226  
-**Doanh Nghiệp Thực Tập:** Amazon Web Services Vietnam Co., Ltd.  
-**Vị Trí Thực Tập:** FCJ Cloud Intern  
-**Thời Gian Thực Tập:** Từ 12/08/2025 đến 12/11/2025  
-
 ---
 
 **Doanh Nghiệp Thực Tập:** Amazon Web Services Vietnam Co., Ltd.  
