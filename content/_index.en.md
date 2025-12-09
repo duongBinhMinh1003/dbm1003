@@ -11,11 +11,7 @@ chapter = false
 **Email:** duongbinhminh10032004@gmail.com  
 **University:** Sai Gon University  
 **Major:** Information Technology  
-**Class:** DCT1226  
-**Internship Company:** Amazon Web Services Vietnam Co., Ltd.  
-**Internship Position:** FCJ Cloud Intern  
-**Internship Duration:** From 12/08/2025 to 12/11/2025  
-
+**Class:** DCT1226   
 ---
 
 **Internship Company:** Amazon Web Services Vietnam Co., Ltd.  
