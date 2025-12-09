@@ -1,0 +1,225 @@
+/* ====================================================================
+   ⭐ AWS Console Premium UI – Sidebar + Header (Refined & Polished)
+   ==================================================================== */
+
+/* ===== 1. Reset fix double scroll ===== */
+aside#R-sidebar * {
+  
+  max-height: none !important;
+
+}
+body {
+   
+    color: #323235;
+        font-family: "Amazon Ember", "Work Sans", sans-serif;
+            text-align: left;
+}
+/* ====================================================================
+   2. Modern Sidebar
+   ==================================================================== */
+aside#R-sidebar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 285px !important;
+  height: 100vh !important;
+
+  background: #1c2536 !important;    /* → Màu elegant hơn #1e293b */
+ 
+
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+
+  border-right: 1px solid rgba(255,255,255,0.06) !important;
+
+  box-shadow: 4px 0 22px rgba(0,0,0,0.28);
+  z-index: 9999;
+}
+
+/* Scrollbar tinh tế */
+aside#R-sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+aside#R-sidebar::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 10px;
+}
+aside#R-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #718097;
+}
+
+/* ====================================================================
+   3. Typography + Link Style
+   ==================================================================== */
+
+aside#R-sidebar a {
+  padding: 9px 12px;
+  display: block;
+
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 8px;
+
+  color: #cbd5e1 !important;
+  text-decoration: none !important;
+
+  transition: 0.2s ease;
+}
+h3.menu-title {
+    color: #778ba5;
+    font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+}
+
+
+/* Topic spacing */
+aside#R-sidebar ul.topics {
+  margin-top: 20px;
+  padding-bottom: 160px !important;
+}
+
+/* ====================================================================
+   4. Search Box – Polished
+   ==================================================================== */
+aside#R-sidebar input {
+  background: #111827 !important;
+  border: 1px solid #465569 !important;
+
+  
+  border-radius: 8px;
+
+  color: #f1f5f9 !important;
+ 
+
+  font-size: 14.5px;
+  transition: 0.2s ease;
+}
+
+aside#R-sidebar input:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.4);
+}
+
+/* ====================================================================
+   5. Logo Section
+   ==================================================================== */
+#R-logo {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#R-logo img {
+  width: 155px !important;  /* ✔ to nhưng không bị vỡ layout */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-title {
+  font-size: 15px;
+  margin-top: 8px;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* ====================================================================
+   6. Header Bar – Gorgeous Steel Blue (#283e5b)
+   ==================================================================== */
+#R-header-wrapper {
+  background: #283e5b !important;
+  color: #e2e8f0 !important;
+
+  padding: 0px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 1px 10px rgba(0,0,0,0.32);
+}
+
+#R-homelinks {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+#R-homelinks .R-menu-divider:last-child hr {
+  border-color: rgba(255,255,255,0.25) !important;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+/* ====================================================================
+   7. Searchbox (External)
+   ==================================================================== */
+.searchbox {
+  background-color: var(--INTERNAL-MENU-SEARCH-BG-color);
+  border-color: var(--INTERNAL-MENU-SEARCH-BORDER-color);
+
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+
+  position: relative;
+  margin-top: 1rem;
+}
+/* ===============================
+   AWS STYLE FOOTER – PREMIUM
+================================= */
+
+.aws-footer {
+  margin-top: 40px;
+  padding: 18px 12px 30px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #dbe4ee;
+  font-size: 14px;
+}
+
+.aws-footer-block {
+  margin-bottom: 22px;
+}
+
+.footer-title {
+  color: #cbd5e1;
+  opacity: 0.75;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.footer-value {
+  color: #fbbf24; /* vàng AWS */
+  font-size: 14px;
+  font-style: italic;
+}
+
+.aws-footer-divider {
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  margin: 18px 0;
+}
+
+.aws-footer-built {
+  margin-top: 12px;
+  font-size: 13px;
+  opacity: 0.8;
+  color: #94a3b8;
+}
+
+.aws-footer-built i {
+  color: #ef4444;   /* trái tim đỏ */
+  margin: 0 4px;
+}
+h1#internship-report {
+  color: #778ba5;
+    font-family: "Amazon Ember", "Montserrat", sans-serif;
+}
+h2#student-information {
+  color: #778ba5;
+
+    font-family: "Amazon Ember", "Montserrat", sans-serif;
+}
+h2#report-content {
+  color: #778ba5;
+  font-family: "Amazon Ember", "Montserrat", sans-serif;
+}
+h1 {
+    color: #778ba5;
+  font-family: "Amazon Ember", "Montserrat", sans-serif;
+}

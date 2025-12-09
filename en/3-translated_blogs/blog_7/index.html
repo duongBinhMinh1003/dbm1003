@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/AWS-Workshop/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=AWS-Workshop/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.152.2">
+    <meta name="generator" content="Relearn 8.2.0+fe198b0077bd441c984854c0a0610da02b2162f8">
+    <meta name="description" content="Những hiểu biết sâu sắc và bài học kinh nghiệm từ Amazon Q trong tích hợp trình thu thập thông tin web ConnectTác giả: Vikas Prasad &amp; Ayush Mehta Ngày: 22/07/2025
+Giới thiệuCác nhân viên tổng đài (Human agents) là yếu tố then chốt trong mọi trung tâm chăm sóc khách hàng, và việc cung cấp cho họ các công cụ phù hợp để thành công là điều thiết yếu đối với mọi tổ chức. Khi được hỗ trợ tốt, các nhân viên không chỉ có trải nghiệm làm việc tốt hơn, mà còn giúp nâng cao trải nghiệm của khách hàng cuối cùng.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Blog 7 :: Internship Report">
+    <meta name="twitter:description" content="Những hiểu biết sâu sắc và bài học kinh nghiệm từ Amazon Q trong tích hợp trình thu thập thông tin web ConnectTác giả: Vikas Prasad &amp; Ayush Mehta Ngày: 22/07/2025
+Giới thiệuCác nhân viên tổng đài (Human agents) là yếu tố then chốt trong mọi trung tâm chăm sóc khách hàng, và việc cung cấp cho họ các công cụ phù hợp để thành công là điều thiết yếu đối với mọi tổ chức. Khi được hỗ trợ tốt, các nhân viên không chỉ có trải nghiệm làm việc tốt hơn, mà còn giúp nâng cao trải nghiệm của khách hàng cuối cùng.">
+    <meta property="og:url" content="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_7/index.html">
+    <meta property="og:site_name" content="Internship Report">
+    <meta property="og:title" content="Blog 7 :: Internship Report">
+    <meta property="og:description" content="Những hiểu biết sâu sắc và bài học kinh nghiệm từ Amazon Q trong tích hợp trình thu thập thông tin web ConnectTác giả: Vikas Prasad &amp; Ayush Mehta Ngày: 22/07/2025
+Giới thiệuCác nhân viên tổng đài (Human agents) là yếu tố then chốt trong mọi trung tâm chăm sóc khách hàng, và việc cung cấp cho họ các công cụ phù hợp để thành công là điều thiết yếu đối với mọi tổ chức. Khi được hỗ trợ tốt, các nhân viên không chỉ có trải nghiệm làm việc tốt hơn, mà còn giúp nâng cao trải nghiệm của khách hàng cuối cùng.">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Blog 7 :: Internship Report">
+    <meta itemprop="description" content="Những hiểu biết sâu sắc và bài học kinh nghiệm từ Amazon Q trong tích hợp trình thu thập thông tin web ConnectTác giả: Vikas Prasad &amp; Ayush Mehta Ngày: 22/07/2025
+Giới thiệuCác nhân viên tổng đài (Human agents) là yếu tố then chốt trong mọi trung tâm chăm sóc khách hàng, và việc cung cấp cho họ các công cụ phù hợp để thành công là điều thiết yếu đối với mọi tổ chức. Khi được hỗ trợ tốt, các nhân viên không chỉ có trải nghiệm làm việc tốt hơn, mà còn giúp nâng cao trải nghiệm của khách hàng cuối cùng.">
+    <meta itemprop="wordCount" content="2873">
+    <title>Blog 7 :: Internship Report</title>
+    <link href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_7/index.html" rel="alternate" hreflang="x-default">
+    <link href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_7/index.html" rel="alternate" hreflang="en">
+    <link href="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/blog_7/index.html" rel="alternate" hreflang="vi">
+    <link href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_7/index.xml" rel="alternate" type="application/rss+xml" title="Blog 7 :: Internship Report">
+    <link href="http://localhost:1313/AWS-Workshop/images/logo.svg?1765261443" rel="icon" type="image/svg+xml">
+    <link href="http://localhost:1313/AWS-Workshop/images/logo.png?1765261443" rel="icon" type="image/png">
+    <link href="http://localhost:1313/AWS-Workshop/css/auto-complete/auto-complete.min.css?1765261443" rel="stylesheet">
+    <script src="http://localhost:1313/AWS-Workshop/js/auto-complete/auto-complete.min.js?1765261443" defer></script>
+    <script src="http://localhost:1313/AWS-Workshop/js/search-lunr.js?1765261443" defer></script>
+    <script src="http://localhost:1313/AWS-Workshop/js/search.js?1765261443" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="http://localhost:1313/AWS-Workshop/searchindex.en.js?1765261443";
+    </script>
+    <script src="http://localhost:1313/AWS-Workshop/js/lunr/lunr.min.js?1765261443" defer></script>
+    <script src="http://localhost:1313/AWS-Workshop/js/lunr/lunr.stemmer.support.min.js?1765261443" defer></script>
+    <script src="http://localhost:1313/AWS-Workshop/js/lunr/lunr.multi.min.js?1765261443" defer></script>
+    <script src="http://localhost:1313/AWS-Workshop/js/lunr/lunr.en.min.js?1765261443" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="http://localhost:1313/AWS-Workshop/fonts/fontawesome/css/fontawesome-all.min.css?1765261443" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/AWS-Workshop/fonts/fontawesome/css/fontawesome-all.min.css?1765261443" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/AWS-Workshop/css/perfect-scrollbar/perfect-scrollbar.min.css?1765261443" rel="stylesheet">
+    <link href="http://localhost:1313/AWS-Workshop/css/theme.css?1765261443" rel="stylesheet">
+    <link href="http://localhost:1313/AWS-Workshop/css/format-html.css?1765261443" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/3-translated_blogs\/blog_7\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/AWS-Workshop';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-light', 'relearn-dark' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <link href="http://localhost:1313/AWS-Workshop/css/custom.css?1765261443" rel="stylesheet">
+  </head>
+  <body class="mobile-support html" data-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_7/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+
+
+
+
+
+
+
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+
+
+
+
+
+
+
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#giới-thiệu">Giới thiệu</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chiến-lược-quản-lý-tri-thức">Chiến lược quản lý tri thức</a></li>
+        <li><a href="#phân-tích-người-dùng-cuối">Phân tích người dùng cuối</a></li>
+        <li><a href="#khả-năng-truy-cập-nội-dung">Khả năng truy cập nội dung</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#giới-hạn-dịch-vụ-service-limit">Giới hạn dịch vụ (Service Limit)</a></li>
+        <li><a href="#tốc-độ-crawl-crawl-rate">Tốc độ crawl (Crawl Rate)</a></li>
+        <li><a href="#định-nghĩa-phạm-vi-crawl-crawl-scope">Định nghĩa phạm vi crawl (Crawl Scope)</a></li>
+        <li><a href="#đánh-giá-chiến-lược-cơ-sở-tri-thức--đơn-hay-đa">Đánh giá chiến lược cơ sở tri thức – đơn hay đa</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#giới-hạn-thời-gian-execution-timeout">Giới hạn thời gian (Execution Timeout)</a></li>
+        <li><a href="#giới-hạn-url-và-cấu-hình-url-configuration">Giới hạn URL và cấu hình (URL Configuration)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="http://localhost:1313/AWS-Workshop/en/index.html"><span itemprop="name">Internship Report</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/index.html"><span itemprop="name">Translated Blogs</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Blog 7</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+
+
+
+
+
+
+
+<span class="btn cstyle button link noborder notitle interactive"><a href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_6/index.html" title="Blog 6 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+
+
+
+
+
+
+
+<span class="btn cstyle button link noborder notitle interactive"><a href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_8/index.html" title="Blog 8 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+
+
+
+
+
+
+
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 3-translated_blogs" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="blog-7">Blog 7</h1>
+
+<h1 id="những-hiểu-biết-sâu-sắc-và-bài-học-kinh-nghiệm-từ-amazon-q-trong-tích-hợp-trình-thu-thập-thông-tin-web-connect">
+  Những hiểu biết sâu sắc và bài học kinh nghiệm từ Amazon Q trong tích hợp trình thu thập thông tin web Connect
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h1><p>Tác giả: Vikas Prasad &amp; Ayush Mehta
+Ngày: 22/07/2025</p>
+<h2 id="giới-thiệu">
+  Giới thiệu
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h2><p>Các nhân viên tổng đài (Human agents) là yếu tố then chốt trong mọi trung tâm chăm sóc khách hàng, và việc cung cấp cho họ các công cụ phù hợp để thành công là điều thiết yếu đối với mọi tổ chức.
+Khi được hỗ trợ tốt, các nhân viên không chỉ có trải nghiệm làm việc tốt hơn, mà còn giúp nâng cao trải nghiệm của khách hàng cuối cùng.</p>
+<p>Để đáp ứng nhu cầu này, Amazon Connect giới thiệu <a href="https://aws.amazon.com/connect/q/" rel="external">Amazon Q in Connect</a> — một trợ lý AI sinh nội dung (Generative AI assistant), cung cấp các phản hồi và hành động gợi ý theo thời gian thực, được cá nhân hóa giúp nhân viên tổng đài thực hiện công việc hiệu quả và nhanh chóng hơn.</p>
+<p>Amazon Q in Connect có thể tích hợp với nhiều cơ sở tri thức (knowledge base) khác nhau thông qua các phương thức tích hợp đa dạng.
+Bài viết này tập trung vào phương pháp tích hợp bằng Web crawler, bao gồm những lưu ý quan trọng khi triển khai và các thực hành tốt nhất.
+Chúng ta sẽ cùng tìm hiểu cách khách hàng có thể truy cập và sử dụng hiệu quả các URL trang web của mình làm nguồn dữ liệu cho Amazon Q in Connect.</p>
+<h1 id="vì-sao-cần-tích-hợp-web-crawler">
+  Vì sao cần tích hợp Web Crawler?
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h1><p>Nội dung thường bị phân tán trên nhiều website, buộc agent phải tra cứu nhiều nguồn khác nhau khi hỗ trợ khách hàng. Điều này làm chậm quá trình xử lý và ảnh hưởng đến chất lượng tương tác.</p>
+<ul>
+<li>Khi được cấu hình với Web Crawler, Amazon Q in Connect có thể:</li>
+</ul>
+<ul>
+<li>Tự động thu thập và lập chỉ mục nội dung từ nhiều website, trang hỗ trợ.</li>
+</ul>
+<ul>
+<li>
+<p>Cung cấp cho agent thông tin sản phẩm nhanh chóng và chính xác.</p>
+</li>
+<li>
+<p>Cung cấp liên kết nguồn gốc để agent và khách có thể đối chiếu.</p>
+</li>
+<li>
+<p>Loại bỏ việc cập nhật thủ công khi nội dung website thay đổi.</p>
+</li>
+</ul>
+<p>Bài viết này sẽ trình bày các giai đoạn và cách tối ưu triển khai Web Crawler trong Amazon Q in Connect.
+<a href="#R-image-08c3e1fd8814272b75882fabcc16e77c" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="http://localhost:1313/AWS-Workshop/aws/hinhanh/hinh1.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-08c3e1fd8814272b75882fabcc16e77c"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="http://localhost:1313/AWS-Workshop/aws/hinhanh/hinh1.jpg"></a></p>
+<p><strong>Biểu đồ 1: Các giai đoạn khác nhau để tối ưu hóa việc triển khai trình thu thập thông tin web</strong></p>
+<h1 id="1-giai-đoạn-planning-lập-kế-hoạch">
+  1. Giai đoạn Planning (Lập kế hoạch)
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h1><p>Trước khi bắt đầu triển khai tích hợp Web crawler cho Amazon Q in Connect, bạn nên tham khảo tài liệu hướng dẫn chính thức của <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html" rel="external">Amazon Connect</a> để biết chi tiết về cách kích hoạt <a href="https://docs.aws.amazon.com/connect/latest/adminguide/enable-q.html" rel="external">Amazon Q in Connect</a> cũng như các yêu cầu tiên quyết cần đáp ứng. Việc hiểu rõ nền tảng kỹ thuật và điều kiện cần thiết sẽ giúp quá trình triển khai diễn ra thuận lợi và tránh phát sinh lỗi khi cấu hình hoặc thu thập dữ liệu.</p>
+<p>Trước khi triển khai tích hợp Web crawler, hãy xem xét kỹ ba nhóm câu hỏi nền tảng sau:</p>
+<h3 id="chiến-lược-quản-lý-tri-thức">
+  Chiến lược quản lý tri thức
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h3><p>Trước hết, tổ chức cần xác định rõ bộ phận chịu trách nhiệm chính trong việc quản lý và duy trì nội dung — có thể là phòng Marketing, bộ phận IT, hoặc đội ngũ Trải nghiệm khách hàng (Customer Experience Team). Việc chỉ định rõ trá ch nhiệm giúp đảm bảo tính nhất quán trong quản trị dữ liệu. Đồng thời, cần thiết lập một quy trình cập nhật nội dung minh bạch, trong đó các thay đổi phải được đồng bộ hóa với hệ thống tổng đài Amazon Connect để các nhân viên luôn truy cập được phiên bản mới nhất của tri thức nội bộ.</p>
+<h3 id="phân-tích-người-dùng-cuối">
+  Phân tích người dùng cuối
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h3><p>Bước tiếp theo là xác định đối tượng sẽ trực tiếp sử dụng cơ sở tri thức. Họ có thể là các agent tuyến 1 — những người chủ yếu xử lý các câu hỏi tổng quát, hoặc các nhân viên hỗ trợ kỹ thuật chuyên sâu phụ trách những vấn đề phức tạp hơn. Trong nhiều trường hợp, hệ thống có thể được sử dụng bởi cả hai nhóm người dùng. Việc phân tích chính xác đặc điểm của người dùng cuối giúp doanh nghiệp xác định phạm vi nội dung cần crawl, cũng như độ sâu chi tiết của thông tin cần được lập chỉ mục để phù hợp với nhu cầu thực tế của từng nhóm.</p>
+<h3 id="khả-năng-truy-cập-nội-dung">
+  Khả năng truy cập nội dung
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h3><p>Cuối cùng, tổ chức cần kiểm tra khả năng truy cập của các nguồn dữ liệu được chọn để tích hợp vào Amazon Q in Connect. Một số nguồn thông tin có thể công khai, trong khi những nguồn khác yêu cầu xác thực hoặc quyền truy cập đặc biệt. Do đó, việc đảm bảo có sự cho phép hợp pháp trước khi tiến hành crawl là cực kỳ quan trọng. Điều này không chỉ tuân thủ các chính sách bảo mật và quyền riêng tư, mà còn giúp quá trình tích hợp diễn ra ổn định, bền vững và không bị gián đoạn bởi các vấn đề liên quan đến quyền truy cập.</p>
+<h1 id="2-giai-đoạn-staged-implementation-triển-khai-theo-giai-đoạn">
+  2. Giai đoạn Staged Implementation (Triển khai theo giai đoạn)
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h1><p>Trong quá trình triển khai tích hợp Web crawler cho Amazon Q in Connect, doanh nghiệp nên bắt đầu với cách tiếp cận có trọng tâm và từng bước thay vì thực hiện đồng loạt trên toàn bộ hệ thống. Cụ thể, hãy tạo các cơ sở tri thức (knowledge base) riêng biệt cho từng nhóm nội dung quan trọng hoặc lĩnh vực trọng điểm. Việc này giúp dễ dàng quản lý, thử nghiệm và kiểm soát chất lượng dữ liệu của từng phần trước khi hợp nhất.</p>
+<p>Tiếp theo, cần kiểm thử độc lập nhiều cấu hình URL khác nhau nhằm xác định đâu là phương án crawl hiệu quả nhất cho từng loại nội dung. Chỉ sau khi đã tối ưu từng phần, bạn mới nên kết hợp các cấu hình này thành một giải pháp tổng thể. Phương pháp này giúp bạn phân tích và xử lý lỗi (troubleshoot) đối với các nguồn nội dung cụ thể mà không ảnh hưởng đến toàn bộ hệ thống. Đồng thời, nó cho phép bạn tinh chỉnh mô hình quét (crawl pattern) để đạt được hiệu suất thu thập dữ liệu tối ưu.</p>
+<p>Khi hệ thống bắt đầu hoạt động, các nhân viên tổng đài (agent) sẽ cung cấp phản hồi thực tế về chất lượng và mức độ phù hợp của các phản hồi do AI đề xuất. Dựa trên phản hồi này, bạn có thể mở rộng dần phạm vi crawl, bổ sung thêm các nhóm nội dung mới để hoàn thiện cơ sở tri thức.</p>
+<p>Phương pháp triển khai theo giai đoạn không chỉ giúp rút ngắn thời gian triển khai ban đầu, mà còn đảm bảo mỗi phần nội dung được tối ưu kỹ lưỡng trước khi tích hợp vào cơ sở tri thức chính (primary knowledge base). Nhờ đó, hệ thống Amazon Q in Connect có thể đạt hiệu suất cao, dữ liệu nhất quán và độ tin cậy tối đa trong quá trình hỗ trợ nhân viên và khách hàng.</p>
+<h1 id="3-giai-đoạn-optimization-tối-ưu-hóa">
+  3. Giai đoạn Optimization (Tối ưu hóa)
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h1><p>Trong giai đoạn này, mục tiêu chính là tinh chỉnh cấu hình và chiến lược tích hợp web crawler để đạt hiệu suất cao nhất, đồng thời đảm bảo tính ổn định của hệ thống và chất lượng dữ liệu được thu thập. Dưới đây là các yếu tố thực tiễn quan trọng cần xem xét khi tối ưu hóa chiến lược tích hợp web crawler cho Amazon Q in Connect.</p>
+<h3 id="giới-hạn-dịch-vụ-service-limit">
+  Giới hạn dịch vụ (Service Limit)
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h3><p>Khi thiết kế hệ thống tích hợp web crawler cho Amazon Q, điều quan trọng là phải nhận thức rõ rằng mỗi crawler chỉ có thể xử lý tối đa <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/webcrawl-data-source-connector.html#:~:text=Enter%20Maximum%20pages%20for%20data%20source%20sync%20between%201%20and%2025000.%20Limit" rel="external">25.000 tệp (files)</a> trong một phiên thu thập dữ liệu (ingestion).
+Giới hạn này đòi hỏi doanh nghiệp phải có chiến lược chọn lọc URL và ưu tiên nội dung thật hiệu quả.</p>
+<p>Cụ thể, nên xây dựng cơ chế lọc nội dung (content filtering mechanism) với thứ tự ưu tiên rõ ràng — tập trung vào:</p>
+<ul>
+<li>
+<p>Các tài liệu quan trọng đối với hoạt động kinh doanh,</p>
+</li>
+<li>
+<p>Các bài viết thường xuyên được truy cập,</p>
+</li>
+<li>
+<p>Và tài nguyên hỗ trợ khách hàng có giá trị cao.</p>
+</li>
+</ul>
+<p>Bên cạnh đó, có thể áp dụng các kỹ thuật như nhận dạng mẫu URL (URL pattern matching), chấm điểm mức độ liên quan nội dung (content relevancy scoring) và lọc theo siêu dữ liệu (metadata filtering) để tận dụng tối đa giới hạn tệp cho phép.
+Do hạn chế này, việc thiết kế kiến trúc nội dung hợp lý và phân tách cơ sở tri thức thành nhiều cấu hình crawler riêng biệt (multiple crawler configurations) là điều cần thiết trong một số trường hợp phức tạp.</p>
+<h3 id="tốc-độ-crawl-crawl-rate">
+  Tốc độ crawl (Crawl Rate)
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h3><p>Khi triển khai web crawler cho Amazon Q, doanh nghiệp cần phối hợp chặt chẽ với đội hạ tầng hoặc IT — những người trực tiếp quản lý website — để xác định ngưỡng tốc độ crawl (crawl rate threshold) phù hợp với khả năng tải và cấu hình cân bằng tải (load balancing) của hệ thống web.
+Các yếu tố như số lượng yêu cầu đồng thời (concurrent requests) và tần suất crawl cần được hiệu chỉnh cẩn thận, vì việc quét quá nhanh có thể gây ra lỗi 504 Gateway Timeout và dẫn đến dữ liệu thu thập không đầy đủ.</p>
+<p>Do đó, nên bắt đầu với tốc độ crawl thấp, sau đó tăng dần (progressive rate limit) trong khi theo dõi thời gian phản hồi của máy chủ web thông qua các công cụ giám sát lưu lượng truy cập (web traffic monitoring tools).
+Bằng cách này, bạn có thể tinh chỉnh tham số crawl để vừa đảm bảo chỉ mục hóa dữ liệu chính xác và ổn định, vừa duy trì độ ổn định cho website.</p>
+<h3 id="định-nghĩa-phạm-vi-crawl-crawl-scope">
+  Định nghĩa phạm vi crawl (Crawl Scope)
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h3><p>Thay vì cố gắng crawl toàn bộ trang web, bạn nên xác định chính xác các điểm bắt đầu crawl (seed URLs) cho từng danh mục nội dung quan trọng.
+Cách làm này giúp hệ thống khám phá nội dung liên quan một cách hiệu quả trong khi giảm số lượng seed URL cần thiết.
+Ví dụ:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{</span> <span style="color:#e6db74">&#34;url&#34;</span>: <span style="color:#e6db74">&#34;https://example.com/products/&#34;</span> <span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span> <span style="color:#e6db74">&#34;url&#34;</span>: <span style="color:#e6db74">&#34;https://example.com/documentation/&#34;</span> <span style="color:#f92672">}</span></span></span></code></pre></div>
+<p>Trong ví dụ trên, mỗi seed URL trỏ đến trang danh mục chính (category index page) thay vì từng trang sản phẩm riêng lẻ, cho phép web crawler tự động tìm thấy toàn bộ nội dung liên quan mà không cần khai báo thủ công hàng trăm URL.</p>
+<h3 id="đánh-giá-chiến-lược-cơ-sở-tri-thức--đơn-hay-đa">
+  Đánh giá chiến lược cơ sở tri thức – đơn hay đa
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h3><p>Tùy thuộc vào mô hình kinh doanh và đặc thù hỗ trợ khách hàng, bạn có thể chọn giữa:</p>
+<ul>
+<li>
+<p>Một cơ sở tri thức thống nhất (unified knowledge base) — phù hợp khi khách hàng thường xuyên đặt câu hỏi liên quan đến nhiều sản phẩm khác nhau.</p>
+</li>
+<li>
+<p>Nhiều cơ sở tri thức tách biệt (separate knowledge bases) — phù hợp khi mỗi nhóm khách hàng chỉ quan tâm đến một dòng sản phẩm cụ thể.</p>
+</li>
+</ul>
+<p>Tuy nhiên, cần lưu ý đến giới hạn số lượng knowledge base mà dịch vụ Amazon Q cho phép.
+Trong một số trường hợp nâng cao, bạn có thể thay đổi động (dynamic switching) giữa các knowledge base ngay trong quá trình chạy (runtime) bằng cách:</p>
+<ol>
+<li>
+<p><a href="https://docs.aws.amazon.com/connect/latest/adminguide/create-ai-agents.html#cli-ai-agents-sample4" rel="external">Ghi đè cấu hình cơ sở tri</a> thức bằng AI Agent phù hợp.</p>
+</li>
+<li>
+<p>Sau đó sử dụng API <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_amazon-q-connect_UpdateSession.html" rel="external">Update session</a> để chuyển đổi giữa các AI Agent tương ứng.</p>
+</li>
+</ol>
+<p>Cách tiếp cận linh hoạt này giúp Amazon Q in Connect có thể phục vụ nhiều loại khách hàng và tình huống hỗ trợ khác nhau mà không cần tái cấu hình toàn bộ hệ thống.
+<a href="#R-image-25e581b412f8817f419daea7f0397f4e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="http://localhost:1313/AWS-Workshop/aws/hinhanh/hinh2.jpg" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-25e581b412f8817f419daea7f0397f4e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="http://localhost:1313/AWS-Workshop/aws/hinhanh/hinh2.jpg"></a></p>
+<p><strong>Sơ đồ 2: Các thành phần của Q trong Connect Assistant</strong></p>
+<h1 id="4-giai-đoạn-implementation-triển-khai-thực-tế">
+  4. Giai đoạn Implementation (Triển khai thực tế)
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h1><h3 id="giới-hạn-thời-gian-execution-timeout">
+  Giới hạn thời gian (Execution Timeout)
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h3><p>Khi triển khai web crawler của Amazon Q, các kiến trúc sư hệ thống cần tính đến giới hạn thời gian thực thi (timeout) cho mỗi phiên crawl.
+Giới hạn này yêu cầu phải áp dụng chiến lược crawl hiệu quả, bao gồm:</p>
+<ul>
+<li>
+<p>Ưu tiên URL (URL prioritization) để tập trung vào các trang quan trọng nhất.</p>
+</li>
+<li>
+<p>Tối ưu hóa mô hình crawl (optimized crawl patterns) nhằm giảm tải và tăng tốc độ thu thập dữ liệu.</p>
+</li>
+<li>
+<p>Và phân tách nội dung thành nhiều phiên crawl nhỏ (segmenting content into multiple crawl jobs) để đảm bảo hoàn thành quá trình thu thập dữ liệu trong khoảng thời gian cho phép.</p>
+</li>
+</ul>
+<h3 id="giới-hạn-url-và-cấu-hình-url-configuration">
+  Giới hạn URL và cấu hình (URL Configuration)
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h3><p>Giao diện người dùng (UI) của Amazon Connect cho phép thêm tối đa 10 URL, trong khi API <a href="https://docs.aws.amazon.com/connect/latest/APIReference/API_amazon-q-connect_UrlConfiguration.html" rel="external">UrlConfiguration</a> hỗ trợ lên tới 100 URL khởi tạo (seed URLs).
+Đối với các tổ chức có nhiều website hoặc lượng nội dung lớn, việc lập kế hoạch thông minh là rất cần thiết.
+Thay vì liệt kê từng trang một, hãy xây dựng sơ đồ cấu trúc nội dung (content structure mapping) để xác định các danh mục chính (key categories).
+Sau đó, tạo các biểu thức chính quy (regex patterns) để xác định:</p>
+<ul>
+<li>
+<p>Nội dung cần thu thập (inclusion patterns),</p>
+</li>
+<li>
+<p>Và nội dung cần loại trừ (exclusion patterns).</p>
+</li>
+</ul>
+<p>Ví dụ:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>._domain<span style="color:#ae81ff">\.</span>com/support/._<span style="color:#ae81ff">\.</span>pdf</span></span></code></pre></div>
+<h1 id="kết-luận">
+  Kết luận
+
+
+
+
+
+
+
+<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span>
+</h1><p>Tóm lại, thực tiễn tốt nhất (best practice) cho việc tích hợp trình thu thập dữ liệu web (web crawler integration) trong Amazon Q in Connect tuân theo một quy trình hệ thống gồm bốn giai đoạn chính:
+Planning (Lập kế hoạch), Staged Implementation (Triển khai theo giai đoạn), Optimization (Tối ưu hóa) và Implementation (Triển khai thực tế).</p>
+<p><strong>Giai đoạn Lập kế hoạch (Planning phase)</strong></p>
+<p>Tập trung vào việc xây dựng chiến lược cơ sở tri thức (knowledge base strategy), phân tích nhu cầu người dùng cuối, và đảm bảo khả năng truy cập nội dung.
+Việc chuẩn bị kỹ lưỡng ở giai đoạn này giúp định hướng chính xác cho các bước triển khai sau.</p>
+<p><strong>Giai đoạn Triển khai theo giai đoạn (Staged Implementation phase)</strong>
+Ở bước này, tổ chức sẽ tạo và kiểm thử các cơ sở tri thức riêng biệt cho từng nhóm nội dung quan trọng, trước khi tích hợp chúng lại thành một hệ thống hoàn chỉnh.
+Cách tiếp cận theo từng phần giúp kiểm soát chất lượng dữ liệu, xử lý lỗi hiệu quả, và đảm bảo độ chính xác của thông tin mà các agent sử dụng.</p>
+<p><strong>Giai đoạn Tối ưu hóa (Optimization phase)</strong>
+Giai đoạn này tập trung giải quyết các yếu tố kỹ thuật then chốt như:
+Giới hạn dịch vụ (service limits) — chẳng hạn giới hạn 25.000 tệp cho mỗi lần crawl.</p>
+<p>Tốc độ thu thập dữ liệu (crawl rate) — để tránh gây tải cho máy chủ.</p>
+<p>Và chiến lược cơ sở tri thức (knowledge base strategy) — xác định xem nên hợp nhất hay tách riêng cơ sở tri thức theo từng dòng sản phẩm.</p>
+<p><strong>Giai đoạn Triển khai thực tế (Implementation phase)</strong>
+Xử lý các vấn đề thực thi như:
+Giới hạn thời gian thu thập (execution timeout),</p>
+<p>Và giới hạn cấu hình URL (URL configuration limits).
+Tại đây, việc giám sát, tinh chỉnh và xác minh quá trình crawl là rất quan trọng để đảm bảo toàn bộ nội dung được thu thập chính xác và đầy đủ.</p>
+<p><strong>Quy trình lặp lại (Iterative Process)</strong>
+Toàn bộ quy trình được thiết kế theo mô hình lặp (iterative), trong đó phản hồi giữa các giai đoạn được sử dụng để liên tục cải thiện và tối ưu hiệu suất tích hợp.
+Cách tiếp cận có hệ thống này giúp các tổ chức triển khai Amazon Q’s web crawler một cách hiệu quả, đồng thời duy trì sự ổn định của hệ thống và đảm bảo bao quát toàn diện nguồn tri thức cho hoạt động của trung tâm liên hệ (contact center).</p>
+<p><strong>Để đạt hiệu quả cao nhất khi sử dụng web crawler integration, cần lưu ý:</strong></p>
+<p>1.Xác định nội dung ưu tiên cao (Identify high-priority content) và phân tích kỹ các URL.</p>
+<p>2.Đặt các điểm bắt đầu crawl cụ thể (Set specific starting points for crawls) để giới hạn phạm vi hợp lý.</p>
+<p>3.Sử dụng bộ lọc regex (Use regex filters) nhằm nhắm chính xác đến các URL có liên quan.</p>
+<p>Theo dõi hiệu suất của Amazon Q in Connect qua Amazon <a href="https://docs.aws.amazon.com/connect/latest/adminguide/monitor-q-assistants-cloudwatch.html" rel="external">CloudWatch Logs</a>, đảm bảo hệ thống hoạt động ổn định và hiệu quả.
+Bằng cách áp dụng các chiến lược này, các tổ chức có thể tích hợp thành công dữ liệu tri thức từ nhiều website vào Amazon Q in Connect, giúp nhân viên hỗ trợ (agents) có quyền truy cập toàn diện vào thông tin sản phẩm và tài liệu hướng dẫn, đồng thời duy trì hoạt động thu thập dữ liệu hiệu quả trong giới hạn dịch vụ.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+
+  
+  <div id="R-header-wrapper" class="default-animation">
+    <div id="R-header" class="default-animation" style="padding-bottom: 12px;">
+      <a id="R-logo" class="R-default" href="http://localhost:1313/AWS-Workshop/en/index.html">
+    <img src="http://localhost:1313/AWS-Workshop/images/logo.svg" alt="AWS Logo1"
+         style="width:240px; height:auto; margin:10px auto; display:block;">
+</a>
+
+        
+    <div id="R-search-box">
+      
+        <search><form action="http://localhost:1313/AWS-Workshop/en/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+    </div>
+    </div>
+
+  
+
+  </div>
+
+  
+  <div id="R-menu-main" class="default-animation">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/1-worklog/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/1-worklog/index.html"><b>1. </b>Worklog</a><ul id="R-subsections-16447363d800ec5deaa3b0a76c63c922" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/2-proposal/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/2-proposal/index.html"><b>2. </b>Proposal</a></li>
+            <li class="parent " data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/index.html"><b>3. </b>Translated Blogs</a><ul id="R-subsections-0acade1cd81cfef73c977718aa56c877" class="collapsible-menu">
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_1/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_1/index.html"><b>3.1. </b>Blog 1</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_2/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_2/index.html"> <b> 3.2. </b>Blog 2</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_3/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_3/index.html"> <b> 3.3. </b>Blog 3</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_4/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_4/index.html"> <b> 3.4. </b>Blog 4</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_5/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_5/index.html"> <b> 3.5. </b>Blog 5</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_6/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_6/index.html"> <b> 3.6. </b>Blog 6</a></li>
+            <li class="active " data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_7/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_7/index.html"> <b> 3.7. </b>Blog 7</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_8/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_8/index.html"> <b> 3.8. </b>Blog 8</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_9/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_9/index.html"> <b> 3.9. </b>Blog 9</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_10/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_10/index.html"> <b> 3.10. </b>Blog 10</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_11/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_11/index.html"> <b> 3.11. </b>Blog 11</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_12/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_12/index.html"> <b> 3.12. </b>Blog 12</a></li></ul></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/4-events_participated/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/4-events_participated/index.html"><b>4. </b>Events Participated</a><ul id="R-subsections-2ffb5c6e09dd8464b993d0a4a8003912" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/5-workshop/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/5-workshop/index.html"><b>5. </b>Workshop</a><ul id="R-subsections-3232083df9b680629be5cc26bdd904c0" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/6-self-assesment/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/6-self-assesment/index.html"><b>6. </b>Self Assesment</a></li>
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/7-sharing_and_feedback/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/7-sharing_and_feedback/index.html"><b>7. </b>Sharing and Feedback</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+  </div>
+
+  
+  <div id="R-menu-secondary" class="default-animation">
+    <h3 class="menu-title">More</h3>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/en/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/en/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+  </div>
+
+  
+  <div id="R-footer-wrapper" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">Language</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-en" value="en" data-url="http://localhost:1313/AWS-Workshop/en/3-translated_blogs/blog_7/index.html" lang="en" selected data-selected>English</option>
+                    <option id="R-select-language-vi" value="vi" data-url="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/blog_7/index.html" lang="vi">Tiếng Việt</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-relearn-light" value="relearn-light" selected>Relearn Light</option>
+                    <option id="R-select-variant-relearn-dark" value="relearn-dark">Relearn Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+
+    <div id="R-footer">
+      <div class="aws-footer">
+  
+  <div class="aws-footer-block">
+    <div class="footer-title">Last Updated</div>
+    <div class="footer-value">09/12/2025</div>
+  </div>
+
+  <div class="aws-footer-block">
+    <div class="footer-title">Team</div>
+    <div class="footer-value">First Cloud Journey</div>
+  </div>
+
+  <div class="aws-footer-divider"></div>
+
+  <div class="aws-footer-built">
+    Built with <i class="fas fa-heart"></i> using Hugo Relearn
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</aside>
+    <script src="http://localhost:1313/AWS-Workshop/js/perfect-scrollbar/perfect-scrollbar.min.js?1765261443" defer></script>
+    <script src="http://localhost:1313/AWS-Workshop/js/theme.js?1765261443" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
