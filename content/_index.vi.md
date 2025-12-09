@@ -4,28 +4,36 @@ weight = 1
 chapter = false
 +++
 
+## Thông Tin Sinh Viên
 
-### Thông Tin Nhóm
+**Họ và Tên:** Dương Bình Minh  
+**Số Điện Thoại:** 0355578938  
+**Email:** duongbinhminh10032004@gmail.com  
+**Trường Đại Học:** Đại học Sài Gòn  
+**Ngành:** Công nghệ Thông tin  
+**Lớp:** DCT1226  
+**Doanh Nghiệp Thực Tập:** Amazon Web Services Vietnam Co., Ltd.  
+**Vị Trí Thực Tập:** FCJ Cloud Intern  
+**Thời Gian Thực Tập:** Từ 12/08/2025 đến 12/11/2025  
 
-| Họ và Tên           | Số Điện Thoại | Email                            | Lớp    | Trường Đại Học       |
-|---------------------|---------------|---------------------------------|--------|--------------------|
-| Phan Cảnh Tuấn Đạt  | 0867829257    | pcanhtuandat@gmail.com           | DCT1226 | Đại học Sài Gòn     |
-| Ngô Tuấn Hưng       | 0776136425    | hungnt.020404@gmail.com          | DKP1221 | Đại học Sài Gòn     |
-| Lê Trung Kiên       | 0931261009    | trungkien1862@gmail.com          | DCT1213 | Đại học Sài Gòn     |
-| Dương Bình Minh     | 0355578938    | duongbinhminh10032004@gmail.com | DCT1226 | Đại học Sài Gòn     |
+---
 
-**Công Ty Thực Tập:** Amazon Web Services Vietnam Co., Ltd.  
-**Vị Trí Thực Tập:** Thực Tập Sinh FCJ Cloud  
-**Thời Gian Thực Tập:** Từ 29/09/2025 đến 22/11/2025
+**Doanh Nghiệp Thực Tập:** Amazon Web Services Vietnam Co., Ltd.  
+**Vị Trí Thực Tập:** FCJ Cloud Intern  
+**Thời Gian Thực Tập (theo đề bài):** Từ 29/09/2025 đến 22/11/2025  
 
-![MyAvatar](/images/forest.jpg)
+---
 
+<figure>
+  <img src="/images/avt.jpg" alt="Ảnh đại diện" style="max-width:100%;height:auto;">
+</figure>
 
-### Nội dung báo cáo
-**1. [Nhật ký công việc](1-Worklog)**  
-**2. [Đề xuất](2-Proposal)**  
-**3. [Blogs đã dịch](3-TranslatedBlogs)**  
-**4. [Sự kiện đã tham gia](4-EventsParticipated)**  
-**5. [Workshop](5-Workshop)**  
-**6. [Tự đánh giá](6-Self-assessment)**  
-**7. [Chia sẻ và Phản hồi](7-SharingAndFeedback)**  
+## Nội Dung Báo Cáo
+
+1. **[Nhật ký công việc (Worklog)](1-Worklog)**
+2. **[Đề xuất (Proposal)](2-Proposal)**
+3. **[Bài dịch kỹ thuật (Translated Blogs)](3-Translated_Blogs)**
+4. **[Các sự kiện đã tham gia](4-Events_Participated)**
+5. **[Workshop](5-Workshop)**
+6. **[Tự đánh giá bản thân](6-Self-Assesment)**
+7. **[Chia sẻ và phản hồi](7-Sharing_and_Feedback)**

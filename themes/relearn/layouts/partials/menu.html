@@ -1,35 +1,55 @@
     {{- $showvisitedlinks := site.Params.showVisitedLinks }}
     <aside id="R-sidebar" class="default-animation">
-      {{- $currentNode := . }}
-      <div id="R-header-topbar" class="default-animation"></div>
-      <div id="R-header-wrapper" class="default-animation">
-        <div id="R-header" class="default-animation">
-{{ partial "logo.html" . }}
-        </div>
-      {{- partial "dependencies.html" (dict "page" . "location" "search") }}
-      </div>
-      <div id="R-homelinks" class="default-animation{{ if not .Site.Params.disableLandingPageButton }} homelinks{{ end }}">
-        {{- $menuconfigs := .Params.sidebarheadermenus | default site.Params.sidebarheadermenus }}
-        {{- if or (eq (printf "%T" $menuconfigs) "string") (eq (printf "%T" $menuconfigs) "<nil>") }}
-          {{- $menuconfigs = partialCached "_relearn/defaultSidebarHeader.gotmpl" . }}
-        {{- end }}
-        {{- partial "inline/menu" (dict "currentnode" $currentNode "configs" $menuconfigs "showvisitedlinks" false) }}
-      </div>
-      <div id="R-content-wrapper" class="highlightable">
-        {{- $menuconfigs := .Params.sidebarmenus | default site.Params.sidebarmenus }}
-        {{- if or (eq (printf "%T" $menuconfigs) "string") (eq (printf "%T" $menuconfigs) "<nil>") }}
-          {{- $menuconfigs = partialCached "_relearn/defaultSidebar.gotmpl" . }}
-        {{- end }}
-        {{- partial "inline/menu" (dict "currentnode" $currentNode "configs" $menuconfigs "showvisitedlinks" $showvisitedlinks) }}
-        <div id="R-footer-margin"></div>
-        {{- $menuconfigs := .Params.sidebarfootermenus | default site.Params.sidebarfootermenus }}
-        {{- if or (eq (printf "%T" $menuconfigs) "string") (eq (printf "%T" $menuconfigs) "<nil>") }}
-          {{- $menuconfigs = partialCached "_relearn/defaultSidebarFooter.gotmpl" . }}
-        {{- end }}
-        {{- partial "inline/menu" (dict "currentnode" $currentNode "configs" $menuconfigs "showvisitedlinks" $showvisitedlinks) }}
-<div id="R-footer">{{ partial "menu-footer.html" . }}</div>
-      </div>
-    </aside>
+
+  <!-- ====================== TOP: LOGO ====================== -->
+  <div id="R-header-wrapper" class="default-animation">
+    <div id="R-header" class="default-animation" style="padding-bottom: 12px;">
+      {{ partial "logo.html" . }}
+        <!-- ============== SEARCH BOX ============== -->
+    <div id="R-search-box">
+      {{ partial "dependencies.html" (dict "page" . "location" "search") }}
+    </div>
+    </div>
+
+  
+
+  </div>
+
+  <!-- ====================== SECTION 1: MAIN MENU ====================== -->
+  <div id="R-menu-main" class="default-animation">
+    {{- $menuconfigs := .Params.sidebarmenus | default site.Params.sidebarmenus }}
+    {{- if or (eq (printf "%T" $menuconfigs) "string") (eq (printf "%T" $menuconfigs) "<nil>") }}
+      {{- $menuconfigs = partialCached "_relearn/defaultSidebar.gotmpl" . }}
+    {{- end }}
+    {{- partial "inline/menu" (dict "currentnode" . "configs" $menuconfigs "showvisitedlinks" $showvisitedlinks) }}
+  </div>
+
+  <!-- ====================== SECTION 2: MORE LINKS ====================== -->
+  <div id="R-menu-secondary" class="default-animation">
+    <h3 class="menu-title">More</h3>
+
+    {{- $menuconfigs := .Params.sidebarheadermenus | default site.Params.sidebarheadermenus }}
+    {{- if or (eq (printf "%T" $menuconfigs) "string") (eq (printf "%T" $menuconfigs) "<nil>") }}
+      {{- $menuconfigs = partialCached "_relearn/defaultSidebarHeader.gotmpl" . }}
+    {{- end }}
+    {{- partial "inline/menu" (dict "currentnode" . "configs" $menuconfigs "showvisitedlinks" false) }}
+  </div>
+
+  <!-- ====================== FOOTER ====================== -->
+  <div id="R-footer-wrapper" class="default-animation">
+    {{- $menuconfigs := .Params.sidebarfootermenus | default site.Params.sidebarfootermenus }}
+    {{- if or (eq (printf "%T" $menuconfigs) "string") (eq (printf "%T" $menuconfigs) "<nil>") }}
+      {{- $menuconfigs = partialCached "_relearn/defaultSidebarFooter.gotmpl" . }}
+    {{- end }}
+    {{- partial "inline/menu" (dict "currentnode" . "configs" $menuconfigs "showvisitedlinks" false) }}
+
+    <div id="R-footer">
+      {{ partial "menu-footer.html" . }}
+    </div>
+  </div>
+
+</aside>
+
 
 {{- define "partials/inline/menu" }}
   {{- $currentNode := .currentnode }}

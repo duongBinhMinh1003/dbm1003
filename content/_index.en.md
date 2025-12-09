@@ -4,34 +4,36 @@ weight = 1
 chapter = false
 +++
 
-### Team Information
+## Student Information
 
-| Full Name           | Phone Number | Email                            | Class   |    Unversity         |
-|---------------------|--------------|----------------------------------|---------|----------------------|
-| Phan Canh Tuan Dat  | 0867829257   | pcanhtuandat@gmail.com           | DCT1226 |  Sai Gon University  |
-| Ngo Tuan Hung       | 0776136425   | hungnt.020404@gmail.com          | DKP1221 |  Sai Gon University  |
-| Le Trung Kien       | 0931261009   | trungkien1862@gmail.com          | DCT1213 |  Sai Gon University  |
-| Duong Binh Minh     | 0355578938   | duongbinhminh10032004@gmail.com  | DCT1226 |  Sai Gon University  |
+**Full Name:** Dương Bình Minh  
+**Phone Number:** 0355578938  
+**Email:** duongbinhminh10032004@gmail.com  
+**University:** Sai Gon University  
+**Major:** Information Technology  
+**Class:** DCT1226  
+**Internship Company:** Amazon Web Services Vietnam Co., Ltd.  
+**Internship Position:** FCJ Cloud Intern  
+**Internship Duration:** From 12/08/2025 to 12/11/2025  
 
-
+---
 
 **Internship Company:** Amazon Web Services Vietnam Co., Ltd.  
 **Internship Position:** FCJ Cloud Intern  
-**Internship Duration:** From 29/09/2025 to 22/11/2025
+**Internship Duration:** From 29/09/2025 to 22/11/2025  
 
-
-<!-- ![MyAvatar](/images/forest.jpg) -->
+---
 
 <figure>
-  <img src="/images/forest.jpg" alt="" style="max-width:100%;height:auto;">
+  <img src="/images/avt.jpg" alt="Avatar" style="max-width:100%;height:auto;">
 </figure>
 
+## Report Content
 
-### Report Content
-**1. [Worklog](1-Worklog)**  
-**2. [Proposal](2-Proposal)**  
-**3. [Translated Blogs](3-Translated_Blogs)**  
-**4. [Events Participated](4-Events_Participated)**  
-**5. [Workshop](5-Workshop)**  
-**6. [Self-awareness](6-Self-Assesment)**  
-**7. [Sharing and Feedback](7-Sharing_and_Feedback)**  
+1. **[Worklog](1-Worklog)**
+2. **[Proposal](2-Proposal)**
+3. **[Translated Blogs](3-Translated_Blogs)**
+4. **[Events Participated](4-Events_Participated)**
+5. **[Workshop](5-Workshop)**
+6. **[Self-awareness](6-Self-Assesment)**
+7. **[Sharing and Feedback](7-Sharing_and_Feedback)**

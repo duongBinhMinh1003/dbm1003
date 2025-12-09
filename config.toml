@@ -1,5 +1,5 @@
 # Production URL (dùng khi deploy)
-baseURL = "https://Ttuandatt.github.io/AWS-Workshop/"
+baseURL = "https://duongbinhminh1003.github.io/dbm1003/"
 publishDir = "public"
 
 # ❗ TẮT cho multilingual + Relearn
