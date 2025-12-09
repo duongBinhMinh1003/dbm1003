@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head><script src="/AWS-Workshop/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=AWS-Workshop/livereload" data-no-instant defer></script>
+  <head><script src="/dbm1003/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=dbm1003/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.152.2">
@@ -10,7 +10,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Nhật ký công việc Tuần 5 :: Báo Cáo Thực Tập">
     <meta name="twitter:description" content="Mục Tiêu Tuần 5Tiếp tục phát triển frontend và backend Học về EC2 Auto Scaling Group Thực hành cài đặt AWS CloudShell Dịch các blog kỹ thuật Nhiệm Vụ Thực Hiện Trong TuầnNgày Nhiệm Vụ Ngày Bắt Đầu Ngày Hoàn Thành Tài Liệu Tham Khảo 1 - Họp nhóm để thảo luận về tiến trình phát triển 06/10/2025 06/10/2025 - Dịch blog Blog dịch 6, Blog dịch 7 - Lập trình backend Authentication Service, User Service - Cài đặt thư viện quản lý trạng thái (Redux), định nghĩa State Model ban đầu, tích hợp API cho trang Login/Register 2 - Học và thực hành EC2 Auto Scaling Group 07/10/2025 07/10/2025 Module-03-02 - EC2 Autoscaling - EFS/FSx - Lightsail - MGN, AWS EC2 Auto Scaling : Step By Step Tutorial - Lập trình backend Authentication Service, User Service, Taskflow Service - Lập trình frontend: Xây dựng UI hiển thị các danh sách dữ liệu chính (table, grid). Tích hợp API Get List và phân trang - Dịch blog Blog dịch 8, Blog dịch 9 3 - Lập trình backend Authentication Service, User Service 08/10/2025 08/10/2025 - Học và thực hành Kafka cho messaging - Lập trình frontend: Xây dựng UI hiển thị các danh sách dữ liệu chính (table, grid). Tích hợp API Get List và phân trang - Cập nhật nhật ký công việc 4 - Lập trình backend Authentication Service, User Service 09/10/2025 09/10/2025 - Lập trình frontend: Xây dựng UI hiển thị các danh sách dữ liệu chính (table, grid). Tích hợp API Get List và phân trang - Học về Caching và áp dụng cache cho cơ sở dữ liệu - Dịch blog Blog dịch 10, Blog dịch 11 5 - Học và thực hành sử dụng CloudShell 10/10/2025 10/10/2025 AWS Certified Cloud Practitioner Certification Course (CLF-C02) - Dịch blog Blog dịch 12">
-    <meta property="og:url" content="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.5-week_5/index.html">
+    <meta property="og:url" content="http://localhost:1313/dbm1003/vi/1-worklog/1.5-week_5/index.html">
     <meta property="og:site_name" content="Báo Cáo Thực Tập">
     <meta property="og:title" content="Nhật ký công việc Tuần 5 :: Báo Cáo Thực Tập">
     <meta property="og:description" content="Mục Tiêu Tuần 5Tiếp tục phát triển frontend và backend Học về EC2 Auto Scaling Group Thực hành cài đặt AWS CloudShell Dịch các blog kỹ thuật Nhiệm Vụ Thực Hiện Trong TuầnNgày Nhiệm Vụ Ngày Bắt Đầu Ngày Hoàn Thành Tài Liệu Tham Khảo 1 - Họp nhóm để thảo luận về tiến trình phát triển 06/10/2025 06/10/2025 - Dịch blog Blog dịch 6, Blog dịch 7 - Lập trình backend Authentication Service, User Service - Cài đặt thư viện quản lý trạng thái (Redux), định nghĩa State Model ban đầu, tích hợp API cho trang Login/Register 2 - Học và thực hành EC2 Auto Scaling Group 07/10/2025 07/10/2025 Module-03-02 - EC2 Autoscaling - EFS/FSx - Lightsail - MGN, AWS EC2 Auto Scaling : Step By Step Tutorial - Lập trình backend Authentication Service, User Service, Taskflow Service - Lập trình frontend: Xây dựng UI hiển thị các danh sách dữ liệu chính (table, grid). Tích hợp API Get List và phân trang - Dịch blog Blog dịch 8, Blog dịch 9 3 - Lập trình backend Authentication Service, User Service 08/10/2025 08/10/2025 - Học và thực hành Kafka cho messaging - Lập trình frontend: Xây dựng UI hiển thị các danh sách dữ liệu chính (table, grid). Tích hợp API Get List và phân trang - Cập nhật nhật ký công việc 4 - Lập trình backend Authentication Service, User Service 09/10/2025 09/10/2025 - Lập trình frontend: Xây dựng UI hiển thị các danh sách dữ liệu chính (table, grid). Tích hợp API Get List và phân trang - Học về Caching và áp dụng cache cho cơ sở dữ liệu - Dịch blog Blog dịch 10, Blog dịch 11 5 - Học và thực hành sử dụng CloudShell 10/10/2025 10/10/2025 AWS Certified Cloud Practitioner Certification Course (CLF-C02) - Dịch blog Blog dịch 12">
@@ -20,32 +20,32 @@
     <meta itemprop="description" content="Mục Tiêu Tuần 5Tiếp tục phát triển frontend và backend Học về EC2 Auto Scaling Group Thực hành cài đặt AWS CloudShell Dịch các blog kỹ thuật Nhiệm Vụ Thực Hiện Trong TuầnNgày Nhiệm Vụ Ngày Bắt Đầu Ngày Hoàn Thành Tài Liệu Tham Khảo 1 - Họp nhóm để thảo luận về tiến trình phát triển 06/10/2025 06/10/2025 - Dịch blog Blog dịch 6, Blog dịch 7 - Lập trình backend Authentication Service, User Service - Cài đặt thư viện quản lý trạng thái (Redux), định nghĩa State Model ban đầu, tích hợp API cho trang Login/Register 2 - Học và thực hành EC2 Auto Scaling Group 07/10/2025 07/10/2025 Module-03-02 - EC2 Autoscaling - EFS/FSx - Lightsail - MGN, AWS EC2 Auto Scaling : Step By Step Tutorial - Lập trình backend Authentication Service, User Service, Taskflow Service - Lập trình frontend: Xây dựng UI hiển thị các danh sách dữ liệu chính (table, grid). Tích hợp API Get List và phân trang - Dịch blog Blog dịch 8, Blog dịch 9 3 - Lập trình backend Authentication Service, User Service 08/10/2025 08/10/2025 - Học và thực hành Kafka cho messaging - Lập trình frontend: Xây dựng UI hiển thị các danh sách dữ liệu chính (table, grid). Tích hợp API Get List và phân trang - Cập nhật nhật ký công việc 4 - Lập trình backend Authentication Service, User Service 09/10/2025 09/10/2025 - Lập trình frontend: Xây dựng UI hiển thị các danh sách dữ liệu chính (table, grid). Tích hợp API Get List và phân trang - Học về Caching và áp dụng cache cho cơ sở dữ liệu - Dịch blog Blog dịch 10, Blog dịch 11 5 - Học và thực hành sử dụng CloudShell 10/10/2025 10/10/2025 AWS Certified Cloud Practitioner Certification Course (CLF-C02) - Dịch blog Blog dịch 12">
     <meta itemprop="wordCount" content="308">
     <title>Nhật ký công việc Tuần 5 :: Báo Cáo Thực Tập</title>
-    <link href="http://localhost:1313/AWS-Workshop/en/1-worklog/1.5-week_5/index.html" rel="alternate" hreflang="x-default">
-    <link href="http://localhost:1313/AWS-Workshop/en/1-worklog/1.5-week_5/index.html" rel="alternate" hreflang="en">
-    <link href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.5-week_5/index.html" rel="alternate" hreflang="vi">
-    <link href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.5-week_5/index.xml" rel="alternate" type="application/rss+xml" title="Nhật ký công việc Tuần 5 :: Báo Cáo Thực Tập">
-    <link href="http://localhost:1313/AWS-Workshop/images/logo.svg?1765261448" rel="icon" type="image/svg+xml">
-    <link href="http://localhost:1313/AWS-Workshop/images/logo.png?1765261448" rel="icon" type="image/png">
-    <link href="http://localhost:1313/AWS-Workshop/css/auto-complete/auto-complete.min.css?1765261448" rel="stylesheet">
-    <script src="http://localhost:1313/AWS-Workshop/js/auto-complete/auto-complete.min.js?1765261448" defer></script>
-    <script src="http://localhost:1313/AWS-Workshop/js/search-lunr.js?1765261448" defer></script>
-    <script src="http://localhost:1313/AWS-Workshop/js/search.js?1765261448" defer></script>
+    <link href="http://localhost:1313/dbm1003/en/1-worklog/1.5-week_5/index.html" rel="alternate" hreflang="x-default">
+    <link href="http://localhost:1313/dbm1003/en/1-worklog/1.5-week_5/index.html" rel="alternate" hreflang="en">
+    <link href="http://localhost:1313/dbm1003/vi/1-worklog/1.5-week_5/index.html" rel="alternate" hreflang="vi">
+    <link href="http://localhost:1313/dbm1003/vi/1-worklog/1.5-week_5/index.xml" rel="alternate" type="application/rss+xml" title="Nhật ký công việc Tuần 5 :: Báo Cáo Thực Tập">
+    <link href="http://localhost:1313/dbm1003/images/logo.svg?1765266465" rel="icon" type="image/svg+xml">
+    <link href="http://localhost:1313/dbm1003/images/logo.png?1765266465" rel="icon" type="image/png">
+    <link href="http://localhost:1313/dbm1003/css/auto-complete/auto-complete.min.css?1765266465" rel="stylesheet">
+    <script src="http://localhost:1313/dbm1003/js/auto-complete/auto-complete.min.js?1765266465" defer></script>
+    <script src="http://localhost:1313/dbm1003/js/search-lunr.js?1765266465" defer></script>
+    <script src="http://localhost:1313/dbm1003/js/search.js?1765266465" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="http://localhost:1313/AWS-Workshop/searchindex.vi.js?1765261448";
+      window.relearn.index_js_url="http://localhost:1313/dbm1003/searchindex.vi.js?1765266465";
     </script>
-    <script src="http://localhost:1313/AWS-Workshop/js/lunr/lunr.min.js?1765261448" defer></script>
-    <script src="http://localhost:1313/AWS-Workshop/js/lunr/lunr.stemmer.support.min.js?1765261448" defer></script>
-    <script src="http://localhost:1313/AWS-Workshop/js/lunr/lunr.multi.min.js?1765261448" defer></script>
-    <script src="http://localhost:1313/AWS-Workshop/js/lunr/lunr.vi.min.js?1765261448" defer></script>
+    <script src="http://localhost:1313/dbm1003/js/lunr/lunr.min.js?1765266465" defer></script>
+    <script src="http://localhost:1313/dbm1003/js/lunr/lunr.stemmer.support.min.js?1765266465" defer></script>
+    <script src="http://localhost:1313/dbm1003/js/lunr/lunr.multi.min.js?1765266465" defer></script>
+    <script src="http://localhost:1313/dbm1003/js/lunr/lunr.vi.min.js?1765266465" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['vi'];
     </script>
-    <link href="http://localhost:1313/AWS-Workshop/fonts/fontawesome/css/fontawesome-all.min.css?1765261448" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/AWS-Workshop/fonts/fontawesome/css/fontawesome-all.min.css?1765261448" rel="stylesheet"></noscript>
-    <link href="http://localhost:1313/AWS-Workshop/css/perfect-scrollbar/perfect-scrollbar.min.css?1765261448" rel="stylesheet">
-    <link href="http://localhost:1313/AWS-Workshop/css/theme.css?1765261448" rel="stylesheet">
-    <link href="http://localhost:1313/AWS-Workshop/css/format-html.css?1765261448" rel="stylesheet" id="R-format-style">
+    <link href="http://localhost:1313/dbm1003/fonts/fontawesome/css/fontawesome-all.min.css?1765266465" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="http://localhost:1313/dbm1003/fonts/fontawesome/css/fontawesome-all.min.css?1765266465" rel="stylesheet"></noscript>
+    <link href="http://localhost:1313/dbm1003/css/perfect-scrollbar/perfect-scrollbar.min.css?1765266465" rel="stylesheet">
+    <link href="http://localhost:1313/dbm1003/css/theme.css?1765266465" rel="stylesheet">
+    <link href="http://localhost:1313/dbm1003/css/format-html.css?1765266465" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -53,7 +53,7 @@
       window.relearn.path='\/1-worklog\/1.5-week_5\/index.html';
       window.relearn.relBasePath='..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..';
-      window.relearn.absBaseUri='http:\/\/localhost:1313\/AWS-Workshop';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/dbm1003';
       window.relearn.disableInlineCopyToClipboard=false;
       window.relearn.enableBlockCodeWrap=true;
       // legal
@@ -97,9 +97,9 @@
       window.relearn.initVariant();
       window.relearn.markVariant();
     </script>
-    <link href="http://localhost:1313/AWS-Workshop/css/custom.css?1765261448" rel="stylesheet">
+    <link href="http://localhost:1313/dbm1003/css/custom.css?1765266465" rel="stylesheet">
   </head>
-  <body class="mobile-support html" data-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.5-week_5/index.html">
+  <body class="mobile-support html" data-url="http://localhost:1313/dbm1003/vi/1-worklog/1.5-week_5/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -137,7 +137,7 @@
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="http://localhost:1313/AWS-Workshop/vi/index.html"><span itemprop="name">Báo Cáo Thực Tập</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/index.html"><span itemprop="name">Nhật Ký Công Việc</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Nhật ký công việc Tuần 5</span><meta itemprop="position" content="3"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="http://localhost:1313/dbm1003/vi/index.html"><span itemprop="name">Báo Cáo Thực Tập</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="http://localhost:1313/dbm1003/vi/1-worklog/index.html"><span itemprop="name">Nhật Ký Công Việc</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Nhật ký công việc Tuần 5</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
@@ -148,7 +148,7 @@
 
 
 
-<span class="btn cstyle button link noborder notitle interactive"><a href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.4-week_4/index.html" title="Nhật ký công việc Tuần 4 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="http://localhost:1313/dbm1003/vi/1-worklog/1.4-week_4/index.html" title="Nhật ký công việc Tuần 4 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
 
@@ -158,7 +158,7 @@
 
 
 
-<span class="btn cstyle button link noborder notitle interactive"><a href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.6-week_6/index.html" title="Nhật ký công việc Tuần 6 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="http://localhost:1313/dbm1003/vi/1-worklog/1.6-week_6/index.html" title="Nhật ký công việc Tuần 6 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 
@@ -237,7 +237,7 @@
           <td>- Dịch blog</td>
           <td></td>
           <td></td>
-          <td><a href="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/blog_6/">Blog dịch 6</a>, <a href="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/blog_7/">Blog dịch 7</a></td>
+          <td><a href="http://localhost:1313/dbm1003/vi/3-translated_blogs/blog_6/">Blog dịch 6</a>, <a href="http://localhost:1313/dbm1003/vi/3-translated_blogs/blog_7/">Blog dịch 7</a></td>
       </tr>
       <tr>
           <td></td>
@@ -279,7 +279,7 @@
           <td>- Dịch blog</td>
           <td></td>
           <td></td>
-          <td><a href="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/blog_8/">Blog dịch 8</a>, <a href="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/blog_9/">Blog dịch 9</a></td>
+          <td><a href="http://localhost:1313/dbm1003/vi/3-translated_blogs/blog_8/">Blog dịch 8</a>, <a href="http://localhost:1313/dbm1003/vi/3-translated_blogs/blog_9/">Blog dịch 9</a></td>
       </tr>
       <tr>
           <td>3</td>
@@ -335,7 +335,7 @@
           <td>- Dịch blog</td>
           <td></td>
           <td></td>
-          <td><a href="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/blog_10/">Blog dịch 10</a>, <a href="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/blog_11/">Blog dịch 11</a></td>
+          <td><a href="http://localhost:1313/dbm1003/vi/3-translated_blogs/blog_10/">Blog dịch 10</a>, <a href="http://localhost:1313/dbm1003/vi/3-translated_blogs/blog_11/">Blog dịch 11</a></td>
       </tr>
       <tr>
           <td>5</td>
@@ -349,7 +349,7 @@
           <td>- Dịch blog</td>
           <td></td>
           <td></td>
-          <td><a href="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/blog_12/">Blog dịch 12</a></td>
+          <td><a href="http://localhost:1313/dbm1003/vi/3-translated_blogs/blog_12/">Blog dịch 12</a></td>
       </tr>
   </tbody>
 </table>
@@ -365,15 +365,15 @@
   
   <div id="R-header-wrapper" class="default-animation">
     <div id="R-header" class="default-animation" style="padding-bottom: 12px;">
-      <a id="R-logo" class="R-default" href="http://localhost:1313/AWS-Workshop/vi/index.html">
-    <img src="http://localhost:1313/AWS-Workshop/images/logo.svg" alt="AWS Logo1"
+      <a id="R-logo" class="R-default" href="http://localhost:1313/dbm1003/vi/index.html">
+    <img src="http://localhost:1313/dbm1003/images/logo.svg" alt="AWS Logo1"
          style="width:240px; height:auto; margin:10px auto; display:block;">
 </a>
 
         
     <div id="R-search-box">
       
-        <search><form action="http://localhost:1313/AWS-Workshop/vi/search/index.html" method="get">
+        <search><form action="http://localhost:1313/dbm1003/vi/search/index.html" method="get">
           <div class="searchbox default-animation">
             <button class="search-detail" type="submit" title="Tìm kiếm (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
             <label class="a11y-only" for="R-search-by">Tìm kiếm</label>
@@ -392,27 +392,27 @@
   <div id="R-menu-main" class="default-animation">
         <div class="R-sidebarmenu R-shortcutmenu-main">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="parent " data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/index.html"><b>1. </b>Nhật Ký Công Việc</a><ul id="R-subsections-16447363d800ec5deaa3b0a76c63c922" class="collapsible-menu">
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.1-week_1/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.1-week_1/index.html"> <b> 1.1.  </b> Nhật ký công việc Tuần 1</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.2-week_2/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.2-week_2/index.html"><b>1.2. </b>Nhật ký công việc Tuần 2</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.3-week_3/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.3-week_3/index.html"><b>1.3. </b>Nhật ký công việc Tuần 3</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.4-week_4/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.4-week_4/index.html"><b> 1.4. </b>Nhật ký công việc Tuần 4</a></li>
-            <li class="active " data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.5-week_5/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.5-week_5/index.html"><b> 1.5. </b>Nhật ký công việc Tuần 5</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.6-week_6/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.6-week_6/index.html"><b> 1.6. </b>Nhật ký công việc Tuần 6</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.7-week_7/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.7-week_7/index.html"><b> 1.7. </b>Nhật ký công việc Tuần 7</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.8-week_8/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.8-week_8/index.html"><b> 1.8. </b>Nhật ký công việc Tuần 8</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.9-week_9/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.9-week_9/index.html"><b> 1.9. </b>Nhật ký công việc Tuần 9</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.10-week_10/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.10-week_10/index.html"><b> 1.10. </b>Nhật ký công việc Tuần 10</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.11-week_11/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.11-week_11/index.html"><b> 1.11. </b>Nhật ký công việc Tuần 11</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.12-week_12/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.12-week_12/index.html"><b> 1.12. </b>Nhật ký công việc Tuần 12</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.13-week_13/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.13-week_13/index.html"><b> 1.13. </b>Nhật ký công việc Tuần 13</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.14-week_14/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.14-week_14/index.html"><b> 1.14. </b>Nhật ký công việcTuần 14</a></li></ul></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/2-proposal/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/2-proposal/index.html"><b>2. </b>Đề xuất</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/3-translated_blogs/index.html"><b>3. </b>Blogs đã dịch</a><ul id="R-subsections-0acade1cd81cfef73c977718aa56c877" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/4-events_participated/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/4-events_participated/index.html"><b>4. </b>Sự kiện đã tham gia</a><ul id="R-subsections-2ffb5c6e09dd8464b993d0a4a8003912" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/5-workshop/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/5-workshop/index.html"><b>5. </b>Workshop</a><ul id="R-subsections-3232083df9b680629be5cc26bdd904c0" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/6-self-assesment/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/6-self-assesment/index.html"><b>6. </b>Tự đánh giá</a></li>
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/7-sharing_and_feedback/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/7-sharing_and_feedback/index.html"><b>7. </b>Chia sẻ và Phản hồi</a></li>
+            <li class="parent " data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/index.html"><b>1. </b>Nhật Ký Công Việc</a><ul id="R-subsections-16447363d800ec5deaa3b0a76c63c922" class="collapsible-menu">
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.1-week_1/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.1-week_1/index.html"> <b> 1.1.  </b> Nhật ký công việc Tuần 1</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.2-week_2/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.2-week_2/index.html"><b>1.2. </b>Nhật ký công việc Tuần 2</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.3-week_3/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.3-week_3/index.html"><b>1.3. </b>Nhật ký công việc Tuần 3</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.4-week_4/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.4-week_4/index.html"><b> 1.4. </b>Nhật ký công việc Tuần 4</a></li>
+            <li class="active " data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.5-week_5/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.5-week_5/index.html"><b> 1.5. </b>Nhật ký công việc Tuần 5</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.6-week_6/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.6-week_6/index.html"><b> 1.6. </b>Nhật ký công việc Tuần 6</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.7-week_7/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.7-week_7/index.html"><b> 1.7. </b>Nhật ký công việc Tuần 7</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.8-week_8/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.8-week_8/index.html"><b> 1.8. </b>Nhật ký công việc Tuần 8</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.9-week_9/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.9-week_9/index.html"><b> 1.9. </b>Nhật ký công việc Tuần 9</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.10-week_10/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.10-week_10/index.html"><b> 1.10. </b>Nhật ký công việc Tuần 10</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.11-week_11/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.11-week_11/index.html"><b> 1.11. </b>Nhật ký công việc Tuần 11</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.12-week_12/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.12-week_12/index.html"><b> 1.12. </b>Nhật ký công việc Tuần 12</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.13-week_13/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.13-week_13/index.html"><b> 1.13. </b>Nhật ký công việc Tuần 13</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/1-worklog/1.14-week_14/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/1-worklog/1.14-week_14/index.html"><b> 1.14. </b>Nhật ký công việcTuần 14</a></li></ul></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/2-proposal/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/2-proposal/index.html"><b>2. </b>Đề xuất</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/3-translated_blogs/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/3-translated_blogs/index.html"><b>3. </b>Blogs đã dịch</a><ul id="R-subsections-0acade1cd81cfef73c977718aa56c877" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/4-events_participated/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/4-events_participated/index.html"><b>4. </b>Sự kiện đã tham gia</a><ul id="R-subsections-2ffb5c6e09dd8464b993d0a4a8003912" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/5-workshop/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/5-workshop/index.html"><b>5. </b>Workshop</a><ul id="R-subsections-3232083df9b680629be5cc26bdd904c0" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/6-self-assesment/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/6-self-assesment/index.html"><b>6. </b>Tự đánh giá</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/7-sharing_and_feedback/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/7-sharing_and_feedback/index.html"><b>7. </b>Chia sẻ và Phản hồi</a></li>
           </ul>
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
@@ -429,7 +429,7 @@
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-homelinks">
           <ul class="space collapsible-menu">
-            <li class="" data-nav-url="http://localhost:1313/AWS-Workshop/vi/index.html"><a class="padding" href="http://localhost:1313/AWS-Workshop/vi/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+            <li class="" data-nav-url="http://localhost:1313/dbm1003/vi/index.html"><a class="padding" href="http://localhost:1313/dbm1003/vi/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
           </ul>
         </div>
         <div class="R-menu-divider default-animation">
@@ -458,8 +458,8 @@
                 <div class="control-style">
                   <label class="a11y-only" for="R-select-language">Ngôn ngữ</label>
                   <select id="R-select-language">
-                    <option id="R-select-language-en" value="en" data-url="http://localhost:1313/AWS-Workshop/en/1-worklog/1.5-week_5/index.html" lang="en">English</option>
-                    <option id="R-select-language-vi" value="vi" data-url="http://localhost:1313/AWS-Workshop/vi/1-worklog/1.5-week_5/index.html" lang="vi" selected data-selected>Tiếng Việt</option>
+                    <option id="R-select-language-en" value="en" data-url="http://localhost:1313/dbm1003/en/1-worklog/1.5-week_5/index.html" lang="en">English</option>
+                    <option id="R-select-language-vi" value="vi" data-url="http://localhost:1313/dbm1003/vi/1-worklog/1.5-week_5/index.html" lang="vi" selected data-selected>Tiếng Việt</option>
                   </select>
                 </div>
                 <div class="clear"></div>
@@ -507,8 +507,8 @@
   </div>
 
 </aside>
-    <script src="http://localhost:1313/AWS-Workshop/js/perfect-scrollbar/perfect-scrollbar.min.js?1765261448" defer></script>
-    <script src="http://localhost:1313/AWS-Workshop/js/theme.js?1765261448" defer></script>
+    <script src="http://localhost:1313/dbm1003/js/perfect-scrollbar/perfect-scrollbar.min.js?1765266465" defer></script>
+    <script src="http://localhost:1313/dbm1003/js/theme.js?1765266465" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
