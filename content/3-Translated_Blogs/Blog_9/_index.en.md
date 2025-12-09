@@ -1,8 +1,8 @@
 +++
-title = "Blog 9"
-weight =  9
+title = "Blog 3"
+weight =  3
 chapter = false
-pre = " <b> 3.9. </b>"
+pre = " <b> 3.3. </b>"
 +++
 
 # Amazon Braket ra mắt bộ xử lý lượng tử siêu dẫn 54-qubit IQM Emerald
@@ -19,7 +19,7 @@ pre = " <b> 3.9. </b>"
 
 Với việc bổ sung IQM Emerald vào Braket, khách hàng hiện có thể truy cập hai bộ xử lý IQM: Garnet 20-qubit và Emerald 54-qubit mới. Cả hai thiết bị đều có sẵn qua Vùng Châu Âu (Stockholm), giúp khách hàng có nhiều lựa chọn phần cứng lượng tử phù hợp với nhu cầu nghiên cứu và yêu cầu thuật toán.
 
-![alt text](/aws/hinhanh/hinh10.jpg)
+![alt text](/images/hinh10.jpg)
 
 **Hình 1: Bộ xử lý IQM Emerald**
 
@@ -31,7 +31,7 @@ Emerald sử dụng kiến trúc Crystal 54 của IQM, được xây dựng bằ
 
 Thiết bị hỗ trợ các phép quay X và Y bất kỳ (arbitrary X and Y rotations) như các cổng một qubit nguyên thủy (native single-qubit gates) và sử dụng cổng CZ như cổng hai-qubit nguyên thủy (native two-qubit operation). Tập cổng này cung cấp sự linh hoạt để triển khai thuật toán lượng tử trong khi vẫn duy trì hoạt động với độ trung thực cao. Dữ liệu đặc tính ban đầu cho thấy độ trung thực trung vị (median) của cổng một-qubit là 99.93% và độ trung thực trung vị của cổng hai-qubit là 99.5%. Các chỉ số hiệu năng cập nhật có thể được tìm thấy trên trang chi tiết thiết bị Emerald trong Braket Console.
 
-![alt text](/aws/hinhanh/hinh11.jpg)
+![alt text](/images/hinh11.jpg)
 
 **Hình 2: Topology của QPU Emerald hiển thị lưới vuông 54-qubit với các coupler có thể điều chỉnh**
 
@@ -68,7 +68,7 @@ Dung lượng 54-qubit của Emerald cho phép khám phá các thuật toán lư
 
 Dưới đây là ví dụ chuẩn bị trạng thái GHZ 49-qubit sử dụng kết nối lưới vuông của Emerald:
 
-![alt text](/aws/hinhanh/hinh12.jpg)
+![alt text](/images/hinh12.jpg)
 
 (Ghi chú: ví dụ trên đặt một đường đi (path) qua topology của Emerald, áp cổng Hadamard lên qubit đầu tiên rồi nối các cặp qubit liền kề bằng CNOT để tạo GHZ, chạy 5000 shots. disable_qubit_rewiring=True ngăn Braket tự map lại qubit — tức đảm bảo mạch tuân theo topology đã chỉ định.)
 
@@ -76,7 +76,7 @@ Dưới đây là ví dụ chuẩn bị trạng thái GHZ 49-qubit sử dụng k
 
 Emerald hỗ trợ khả năng [dynamic circuits](https://aws.amazon.com/blogs/quantum-computing/experiment-with-dynamic-circuits-on-iqm-garnet-with-amazon-braket/) (tính năng thử nghiệm của Amazon Braket), cho phép chương trình lượng tử đo qubit giữa chừng (mid-circuit measurement) và áp dụng phép toán lượng tử có điều kiện dựa trên kết quả đo. Khả năng này mở ra các khả năng mới cho giao thức sửa lỗi lượng tử, thuật toán thích ứng (adaptive algorithms), và tận dụng qubit hiệu quả thông qua active reset. Ví dụ sau minh họa tái sử dụng qubit bằng active reset sử dụng dynamic circuits trên Emerald:
 
-![alt text](/aws/hinhanh/hinh13.jpg)
+![alt text](/images/hinh13.jpg)
 
 (Ghi chú chi tiết các lệnh trên)
 

@@ -1,8 +1,8 @@
 +++
-title = "Blog 7"
-weight = 7
+title = "Blog 1"
+weight = 1
 chapter = false
-pre = "<b>3.7.</b>"
+pre = "<b>3.1.</b>"
 +++
 
 # Những hiểu biết sâu sắc và bài học kinh nghiệm từ Amazon Q trong tích hợp trình thu thập thông tin web Connect
@@ -39,7 +39,7 @@ Khi được cấu hình với **Web Crawler**, Amazon Q in Connect có thể:
 
 - Loại bỏ việc cập nhật thủ công khi nội dung website thay đổi
 
-![Web crawler phases](/aws/hinhanh/hinh1.jpg)
+![Web crawler phases](/images/hinh1.jpg)
 
 **Hình 1:** Các giai đoạn tối ưu triển khai Web Crawler
 

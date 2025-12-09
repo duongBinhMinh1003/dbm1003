@@ -1,12 +1,12 @@
 +++
 
-title = "Blog 9"
+title = "Blog 3"
 
-weight = 9
+weight = 3
 
 chapter = false
 
-pre = "<b>3.9.</b>"
+pre = "<b>3.3.</b>"
 
 +++
 

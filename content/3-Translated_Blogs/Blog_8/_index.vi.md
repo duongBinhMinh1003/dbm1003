@@ -1,8 +1,8 @@
 +++
-title = "Blog 8"
-weight = 8
+title = "Blog 2"
+weight = 2
 chapter = false
-pre = "<b> 3.8. </b>"
+pre = "<b> 3.2. </b>"
 +++
 
 # Xây dựng hệ thống đa-tenant resilient với Amazon SQS Fair Queues
@@ -52,7 +52,7 @@ Amazon SQS liên tục theo dõi số lượng message **in-flight** (đã nhậ
 
 Khi không có backlog, message được phân phối đều giữa các tenant. Dwell time thấp cho tất cả tenant.
 
-![Hình 1: Multi-tenant queue ở trạng thái steady state](/aws/hinhanh/hinh3.jpg)
+![Hình 1: Multi-tenant queue ở trạng thái steady state](/images/hinh3.jpg)
 
 ---
 
@@ -60,7 +60,7 @@ Khi không có backlog, message được phân phối đều giữa các tenant.
 
 Tenant A gửi lượng lớn message, tạo backlog. Consumer chủ yếu xử lý message của tenant A, khiến dwell time của các tenant khác tăng lên.
 
-![Hình 2: Multi-tenant queue với noisy tenant](/aws/hinhanh/hinh4.jpg)
+![Hình 2: Multi-tenant queue với noisy tenant](/images/hinh4.jpg)
 
 ---
 
@@ -68,7 +68,7 @@ Tenant A gửi lượng lớn message, tạo backlog. Consumer chủ yếu xử 
 
 SQS xác định tenant A là noisy neighbor và ưu tiên message của các tenant B, C, D. Dwell time của các tenant yên lặng được duy trì thấp, trong khi tenant gây ồn chấp nhận có thời gian chờ cao hơn mà không ảnh hưởng đến tenant khác.
 
-![Hình 3: Multi-tenant queue với SQS Fair Queues](/aws/hinhanh/hinh5.jpg)
+![Hình 3: Multi-tenant queue với SQS Fair Queues](/images/hinh5.jpg)
 
 **Lưu ý:**
 
@@ -89,7 +89,7 @@ SQS xác định tenant A là noisy neighbor và ưu tiên message của các te
 2. Cấu hình CloudWatch để theo dõi metric
 3. Quan sát hành vi queue với workload khác nhau
 
-![Thêm MessageGroupId vào message](/aws/hinhanh/hinh6.jpg)
+![Thêm MessageGroupId vào message](/images/hinh6.jpg)
 
 Amazon SQS sẽ **tự động kích hoạt Fair Queues** cho các SQS Standard Queue chứa MessageGroupId:
 - Không cần thay đổi code consumer
@@ -125,7 +125,7 @@ So sánh metric **InQuietGroups** với metric queue thông thường:
 - Metric của quiet groups vẫn giữ ở mức thấp
 - Chứng tỏ tenant khác không bị ảnh hưởng
 
-![Hình 4: So sánh backlog noisy vs quiet tenant](/aws/hinhanh/hinh7.jpg)
+![Hình 4: So sánh backlog noisy vs quiet tenant](/images/hinh7.jpg)
 
 ---
 
@@ -136,7 +136,7 @@ Sử dụng **Amazon CloudWatch Contributor Insights** để:
 - Theo dõi tổng số tenant
 - Tránh chi phí metric cao do high-cardinality
 
-![Hình 5: Contributor Insights theo MessageGroupId](/aws/hinhanh/hinh8.jpg)
+![Hình 5: Contributor Insights theo MessageGroupId](/images/hinh8.jpg)
 
 Contributor Insights tạo metric từ log ứng dụng, do đó ứng dụng cần log số lượng message và MessageGroupId.
 
@@ -150,7 +150,7 @@ AWS cung cấp một **sample application** để minh họa Amazon SQS Fair Que
 - CloudWatch dashboard trực quan hóa các metric quan trọng
 - Infrastructure as Code (IaC) đầy đủ
 
-![Hình 6: CloudWatch FairQueues Dashboard](/aws/hinhanh/hinh9.jpg)
+![Hình 6: CloudWatch FairQueues Dashboard](/images/hinh9.jpg)
 
 Mã nguồn và hướng dẫn chạy:
 👉 https://github.com/aws-samples/sqs-fair-queues

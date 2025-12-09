@@ -1,8 +1,8 @@
 +++
-title = "Blog 7"
-weight =  7
+title = "Blog 1"
+weight =  1
 chapter = false
-pre = " <b> 3.7. </b>"
+pre = " <b> 3.1. </b>"
 +++
 
 # Những hiểu biết sâu sắc và bài học kinh nghiệm từ Amazon Q trong tích hợp trình thu thập thông tin web Connect
@@ -36,7 +36,7 @@ Nội dung thường bị phân tán trên nhiều website, buộc agent phải 
 - Loại bỏ việc cập nhật thủ công khi nội dung website thay đổi.
 
 Bài viết này sẽ trình bày các giai đoạn và cách tối ưu triển khai Web Crawler trong Amazon Q in Connect.
-![alt text](/aws/hinhanh/hinh1.jpg)
+![alt text](/images/hinh1.jpg)
 
 **Biểu đồ 1: Các giai đoạn khác nhau để tối ưu hóa việc triển khai trình thu thập thông tin web**
 
@@ -126,7 +126,7 @@ Trong một số trường hợp nâng cao, bạn có thể thay đổi động 
 2. Sau đó sử dụng API [Update session](https://docs.aws.amazon.com/connect/latest/APIReference/API_amazon-q-connect_UpdateSession.html) để chuyển đổi giữa các AI Agent tương ứng.
 
 Cách tiếp cận linh hoạt này giúp Amazon Q in Connect có thể phục vụ nhiều loại khách hàng và tình huống hỗ trợ khác nhau mà không cần tái cấu hình toàn bộ hệ thống.
-![alt text](/aws/hinhanh/hinh2.jpg)
+![alt text](/images/hinh2.jpg)
 
 **Sơ đồ 2: Các thành phần của Q trong Connect Assistant**
 

@@ -1,8 +1,8 @@
 +++
-title = "Blog 8"
-weight =  8
+title = "Blog 2"
+weight =  2
 chapter = false
-pre = " <b> 3.8. </b>"
+pre = " <b> 3.2. </b>"
 +++
 
 # Xây dựng hệ thống đa tenant resilient với hàng đợi công bằng Amazon SQS
@@ -47,19 +47,19 @@ Amazon SQS liên tục theo dõi sự phân bố các message đã được nh�
 Hãy xem ví dụ sau với một hàng đợi multi-tenant và bốn tenant khác nhau (A, B, C và D).
 Trong trạng thái ổn định (steady state), hàng đợi không có backlog, và message in-flight được phân phối đều giữa các tenant. Tất cả message được xử lý ngay khi xuất hiện. Thời gian lưu message (dwell time) thấp cho tất cả tenant. Lưu ý rằng năng lực xử lý của consumer không phải lúc nào cũng được dùng hết trong trạng thái này.
 
-![alt text](/aws/hinhanh/hinh3.jpg)
+![alt text](/images/hinh3.jpg)
 
 **Hình 1: Một hàng đợi multi-tenant ở trạng thái steady state**
 
 Bây giờ xét kịch bản có tenant gây ồn: số lượng message của tenant A tăng mạnh và tạo backlog trong hàng đợi. Consumer bận xử lý chủ yếu message từ tenant A, còn các message từ các tenant khác phải chờ trong hàng đợi, dẫn tới tăng dwell time cho tất cả.
 
-![alt text](/aws/hinhanh/hinh4.jpg)
+![alt text](/images/hinh4.jpg)
 
 **Hình 2: Hàng đợi multi-tenant với một noisy tenant**
 
 Khi một tenant bắt đầu chiếm phần lớn tài nguyên consumer, Amazon SQS fair queues xem tenant đó là noisy neighbor và ưu tiên trả message của các tenant còn lại. Cách ưu tiên này giúp duy trì dwell time thấp cho các tenant yên lặng (B, C, D), trong khi dwell time của tenant A sẽ cao hơn cho tới khi backlog của nó được xử lý — nhưng không ảnh hưởng đến các tenant khác.
 
-![alt text](/aws/hinhanh/hinh5.jpg)
+![alt text](/images/hinh5.jpg)
 
 **Hình 3: Hàng đợi multi-tenant với fair queues**
 
@@ -78,7 +78,7 @@ Dưới đây là phần giới thiệu nhanh về cách bắt đầu sử dụn
 
 Kích hoạt Amazon SQS fair queues bằng cách thêm MessageGroupId (tenant identifier)
 Producer có thể thêm định danh tenant bằng cách đặt MessageGroupId cho message gửi đi:
-![alt text](/aws/hinhanh/hinh6.jpg)
+![alt text](/images/hinh6.jpg)
 
 Tính năng fairness mới sẽ được áp dụng tự động cho tất cả SQS standard queues đối với các message có thuộc tính MessageGroupId.
 Không cần thay đổi code phía consumer.
@@ -116,7 +116,7 @@ Bạn có thể **so sánh metric `InQuietGroups` với metric queue thông thư
 - Khi một tenant tạo traffic đột biến, metric toàn queue tăng backlog
 - Nhưng metric quiet groups vẫn thấp → chứng tỏ tenant khác không bị ảnh hưởng
 
-![alt text](/aws/hinhanh/hinh7.jpg)
+![alt text](/images/hinh7.jpg)
 
 **Hình 4:** Biểu đồ backlog tenant noisy vs quiet
 
@@ -132,7 +132,7 @@ Dùng **[Amazon CloudWatch Contributor Insights](https://docs.aws.amazon.com/Ama
 
 > Điều này hữu ích khi có hàng nghìn tenant, giúp tránh chi phí metric lớn (**high-cardinality**).
 
-![alt text](/aws/hinhanh/hinh8.jpg)
+![alt text](/images/hinh8.jpg)
 
 **Hình 5:** Dashboard Contributor Insights dựa trên MessageGroupId
 
@@ -148,7 +148,7 @@ Ví dụ đầy đủ có trong sample app phần tiếp theo.
 
 Ứng dụng ví dụ này bao gồm một trình tạo tải (load generator) để mô phỏng traffic multi-tenant và cung cấp một [CloudWatch dashboard](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html) hiển thị các metric quan trọng nhất để trực quan hóa cách fair queues hoạt động. Hình dưới đây minh hoạ dashboard đó:
 
-![alt text](/aws/hinhanh/hinh9.jpg)
+![alt text](/images/hinh9.jpg)
 
 **Hình 6:** CloudWatch FairQueuesDashboard
 
